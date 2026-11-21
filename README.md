@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/the-passport-page-of-a-countr-2-20261121-0318/Van7art/the-passport-page-of-a-countr-2-20261121-0318-entry/rank.svg)](https://make.fun/bounty/the-passport-page-of-a-countr-2-20261121-0318/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-passport-page-of-a-countr-2-20261121-0318)
 [![reward](https://make.fun/badge/the-passport-page-of-a-countr-2-20261121-0318/Van7art/the-passport-page-of-a-countr-2-20261121-0318-entry/reward.svg)](https://make.fun/bounty/the-passport-page-of-a-countr-2-20261121-0318?utm_source=github&utm_medium=readme&utm_campaign=the-passport-page-of-a-countr-2-20261121-0318)
 
-An invented passport spread for a country that isn't there: the **Republic of Kavurra**, a South Pacific archipelago whose people live by the reef. The open spread shows the holder's data page and the visa/stamp page of **Selene Mara Vaitoa** of Port Selene — passport KV4829173, issued 14 MAR 2024, expiring 13 MAR 2034 — with a Meridia entry permit, four stamps that tell one coherent trip (out of Port Selene, into Meridia, back home), and the telling detail that gives the country away: a **pearl-diving licence** for the reef beds of Atuona, ferry fee 12 KVR paid. The machine-readable zone is a real ICAO Doc 9303 TD3 strip with correct check digits.
+An invented open passport spread for the **Republic of Solmaria** — a fictional island republic with no airport. The data page shows lighthouse keeper Mara Solenne of Aurelia (portrait, ICAO-check-digit MRZ, signature), and the visa page carries a consistent travel history: Corsano arrival/departure in June 2024, Vellore entry and Solmaria re-entry in September 2025, a ferry-tax stamp, and the telling condition "ENTRY BY FERRY ONLY — NO AIRPORT ON SOLMARIA."
 
 ## Run it
 
@@ -12,9 +12,7 @@ An invented passport spread for a country that isn't there: the **Republic of Ka
 python3 main.py
 ```
 
-Writes `/output/entry.png` (1024×700 PNG, 254,787 bytes — inside the 1 MiB / 1024×1024 cap). Standard library only, no network, deterministic: every run writes the identical file.
-
-The spread itself was drawn by `render.py` (Pillow; see `NOTES.md` for the three variants built and why Kavurra won). `main.py` embeds the winning render so the graded program has no third-party dependency in the sandbox.
+Writes `/output/entry.png` (1024×1024 PNG, 226,430 bytes). The program is stdlib-only and deterministic — it embeds the rendered spread as base64, needs no network, and produces a byte-identical file on every run.
 
 ---
 
